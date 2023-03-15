@@ -10,4 +10,5 @@ class Book(models.Model):
         return f'Id {self.id}: {self.name}'
 
 
-# привет
+    def a(self):
+        pass
