@@ -175,3 +175,5 @@ class BooksRelationTestCase(APITestCase):
         self.assertEqual(status.HTTP_200_OK, response.status_code, response.data)
         relation = UserBookRelation.objects.get(user=self.user, book=self.book_1)
         self.assertEqual(3, relation.rate)
+
+

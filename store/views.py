@@ -31,9 +31,8 @@ class UserBookRelationView(UpdateModelMixin, GenericViewSet):
     lookup_field = 'book'
 
     def get_object(self):
-        obj, created = UserBookRelation.objects.get_or_create(user=self.request.user,
-                                                              book_id=self.kwargs['book'])
-        print('created', created)
+        obj, _ = UserBookRelation.objects.get_or_create(user=self.request.user,
+                                                        book_id=self.kwargs['book'])
         return obj
 
 
