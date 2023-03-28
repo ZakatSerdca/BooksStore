@@ -25,6 +25,7 @@ class UserBookRelation(models.Model):
         (4, 'Amazing'),
         (5, 'Incredible')
     )
+
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     book = models.ForeignKey(Book, on_delete=models.CASCADE)
     like = models.BooleanField(default=False)
